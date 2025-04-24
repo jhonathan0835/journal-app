@@ -1,6 +1,7 @@
 import { Box } from "@mui/material"
 import { ReactNode } from "react";
 import NavBar from "../components/NavBar";
+import SideBar from "../components/SideBar";
 
 interface AuthLayoutProps {
   children: ReactNode;
@@ -17,6 +18,8 @@ const JournalLayout = ({children}:AuthLayoutProps) => {
         <NavBar drawerWidth={drawerWidth} />
 
         {/* Sidebar */}
+
+        <SideBar drawerWidth={drawerWidth} />
 
         <Box 
         component='main'
