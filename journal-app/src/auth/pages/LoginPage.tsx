@@ -22,6 +22,7 @@ const LoginPage = () => {
           padding: 4,
           borderRadius: 3,
           boxShadow: 2,
+          maxWidth: 400
         }}
       >
         <Typography variant="h5" sx={{ mb: 1 }} align="center">
