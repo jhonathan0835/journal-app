@@ -5,7 +5,7 @@ import AuthLayout from "../layout/AuthLayout";
 const LoginPage = () => {
   return (
 
-    <AuthLayout title="Login">    
+    <AuthLayout title="Ingresar a tu cuenta">    
         <form>
           <Grid container>
             <Grid size={{ xs: 12, sm: 12, md: 12 }} mb={2}>
@@ -37,13 +37,12 @@ const LoginPage = () => {
                 </Button>
               </Grid>
             </Grid>
-
-          <Grid container direction='row' justifyContent='end' >
-            <Link color='inherit' component={RouterLink} to='/auth/register'>
-              Crear una cuenta
-            </Link>
           </Grid>
-          
+          <Grid container direction='row' justifyContent='end' >
+             <Typography sx={{ mr: 1 }}>¿No tienes cuenta?</Typography>
+            <Link color='inherit' component={RouterLink} to='/auth/register'>
+              Crear cuenta
+            </Link>
           </Grid>
         </form>
         </AuthLayout>
