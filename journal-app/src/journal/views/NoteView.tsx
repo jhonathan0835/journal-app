@@ -1,5 +1,6 @@
 import { SaveOutlined } from "@mui/icons-material";
 import { Button, Grid, TextField, Typography } from "@mui/material";
+import ImageGallery from "../components/ImageGallery";
 
 const NoteView = () => {
   return (
@@ -36,10 +37,14 @@ const NoteView = () => {
           fullWidth
           multiline
           placeholder="¿Que sucedio el dia de hoy?"
-          minRows={5}
+          minRows={7}
+          sx={{mb:5, border: "none" }}
         />
       </Grid>
+      {/* <ImageGallery /> */}
+      <ImageGallery />
     </Grid>
+    
   );
 };
 
