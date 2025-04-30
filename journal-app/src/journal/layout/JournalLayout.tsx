@@ -23,7 +23,6 @@ const JournalLayout = ({ children }: JournalLayoutProps) => {
         sx={{
           flexGrow: 1,
           p: 3,
-          ml: `${drawerWidth}px`, // Margin left for the sidebar
           mt: "64px", // Margin top for the navbar (default AppBar height)
         }}
       >
