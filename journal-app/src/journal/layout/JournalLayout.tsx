@@ -1,39 +1,36 @@
-import { Box } from "@mui/material"
-import { ReactNode } from "react";
+import { Box } from "@mui/material";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 
-interface AuthLayoutProps {
-  children: ReactNode;
+interface JournalLayoutProps {
+  children: React.ReactNode;
 }
 
 const drawerWidth = 240;
 
-const JournalLayout = ({children}:AuthLayoutProps) => {
+const JournalLayout = ({ children }: JournalLayoutProps) => {
   return (
+    <Box sx={{ display: "flex" }}>
+      {/* NavBar */}
+      <NavBar drawerWidth={drawerWidth} />
 
-    <Box>
+      {/* SideBar */}
+      <SideBar drawerWidth={drawerWidth} />
 
-        {/* NavBar */}
-        <NavBar drawerWidth={drawerWidth} />
-
-        {/* Sidebar */}
-
-        <SideBar drawerWidth={drawerWidth} />
-
-        <Box 
-        component='main'
-        sx={{flexGrow: 1, p: 3}}
-        >
-            {/* Toolbar */}
-            {children}
-
-        </Box>
-
+      {/* Main content */}
+      <Box
+        component="main"
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          ml: `${drawerWidth}px`, // Margin left for the sidebar
+          mt: "64px", // Margin top for the navbar (default AppBar height)
+        }}
+      >
+        {children}
+      </Box>
     </Box>
+  );
+};
 
-
-  )
-}
-
-export default JournalLayout
+export default JournalLayout;
